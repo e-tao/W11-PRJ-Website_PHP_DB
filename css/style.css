@@ -58,6 +58,22 @@ text-decoration-thickness:3px;
 font-weight: bold;
 }
 
+#p404 {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#img404>img {
+  height:400px;
+}
+
+#txt404>p {
+  font: 15pt;
+  margin-top: 20px;
+}
+
 #home{
   background-color: antiquewhite;
 }
@@ -69,3 +85,5 @@ font-weight: bold;
 #about{
   background-color: beige;
 }
+
+#
