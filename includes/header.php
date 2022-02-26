@@ -37,11 +37,11 @@ if ($page == null) {
     </header>
     <nav>
         <?php
-        echo "<div id=topNav-left>";
+        echo "<div>";
         $topNav = MenuQuery::getMenuItems('top', $pdo);
         echo Menu::display($topNav);
         echo "</div>";
-        echo "<div id=topNav-right>";
+        echo "<div>";
         $loginNav = MenuQuery::getMenuItems('login', $pdo);
         echo Menu::display($loginNav);
         echo "</div>";
