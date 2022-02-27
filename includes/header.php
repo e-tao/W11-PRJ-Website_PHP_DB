@@ -33,7 +33,7 @@ if ($page == null) {
 
 <body>
     <header>
-        <p>This is the Header</p>
+        <p>Itsy Bitsy Baby Nutrition</p>
     </header>
     <nav>
         <?php

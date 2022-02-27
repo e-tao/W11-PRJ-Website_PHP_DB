@@ -8,18 +8,37 @@ body {
   margin: auto;
 }
 
-header,
-footer {
-  background-color: #d3f7a3;
+header {
+  background-image: linear-gradient(
+      125deg,
+      rgba(218, 224, 158, 0.4) 0%,
+      rgba(211, 247, 163, 0.6) 100%
+    ),
+    url(../img/baby.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 270px;
-  text-align: center;
+}
+
+header > p {
+  position: absolute;
+  font-size: 35pt;
+  margin-left: 50px;
+  margin-top: 100px;
 }
 
 footer {
+  background-image: linear-gradient(
+    125deg,
+    rgba(218, 224, 158, 0.4) 0%,
+    rgba(211, 247, 163, 0.6) 100%
+  );
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 nav {
@@ -40,50 +59,65 @@ ul {
 
 ul > li {
   margin: 2px 20px;
+  text-align: justify;
 }
 
-ul > li > a:visited,
-ul > li > a {
+ul > li > a,
+ul > li > a:visited {
   text-decoration: none;
-  color:black;
+  color: black;
+}
+
+ul > li > a:hover,
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #aeed9d;
+  text-underline-offset: 2px;
+  font-weight: bold;
 }
 
 main {
-  height: 600px;
-}
-
-.active{
-text-decoration: underline;
-text-decoration-thickness:3px;
-font-weight: bold;
+  height: 500px;
 }
 
 #p404 {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 60px;
 }
 
-#img404>img {
-  height:400px;
+#img404 > img {
+  height: 400px;
 }
 
-#txt404>p {
-  font: 15pt;
+#txt404 > p {
+  font-size: 15pt;
   margin-top: 20px;
 }
 
-#home{
-  background-color: antiquewhite;
+#phome,
+#pabout {
+  margin-top: 20px;
 }
 
-#store{
-  background-color: aqua;
+#phome > img {
+  height: 150px;
+  border-radius: 75px;
+  opacity: 0.8;
+  float: left;
 }
 
-#about{
-  background-color: beige;
+#phome > p,
+#pabout > p {
+  margin-left: 180px;
+  margin-bottom: 15px;
+  font-size: 15pt;
 }
 
-#
+#phome > ul > li {
+  border: 2px solid #eddf9d;
+  border-radius: 5px;
+  padding: 5px;
+}
