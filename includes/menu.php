@@ -18,9 +18,8 @@ class Menu
 
     public function __toString()
     {
-
         $class = $this->isActive ? 'active' : 'inactive';
-        return "<li class=\"$class $this->menuText\"><a href=\"?p=$this->lp\">$this->menuText</a></li>";
+        return "<li class=\"$class\"><a href=\"?p=$this->lp\">$this->menuText</a></li>";
     }
 
     public static function display($menuItems)

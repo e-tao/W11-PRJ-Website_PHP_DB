@@ -78,7 +78,8 @@ ul > li > a:hover,
 }
 
 main {
-  height: 500px;
+  min-height: 500px;
+  height: auto;
 }
 
 #p404 {
@@ -120,4 +121,28 @@ main {
   border: 2px solid #eddf9d;
   border-radius: 5px;
   padding: 5px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.product > p {
+  width: 150px;
+  word-wrap: normal;
+}
+
+.product > img {
+  width: 150px;
+}
+
+#pWraper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
