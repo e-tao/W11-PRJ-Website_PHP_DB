@@ -1,3 +1,8 @@
+@font-face {
+  font-family: honeycute;
+  src: url(../font/HoneyCute.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +11,7 @@
 body {
   width: 1080px;
   margin: auto;
+  font-family: Calibri, sans-serif;
 }
 
 header {
@@ -23,9 +29,11 @@ header {
 
 header > p {
   position: absolute;
-  font-size: 35pt;
-  margin-left: 50px;
+  font-size: 45pt;
+  margin-left: 45px;
   margin-top: 100px;
+  font-family: honeycute;
+  color: #757536;
 }
 
 footer {
@@ -70,14 +78,14 @@ ul > li {
 ul > li > a,
 ul > li > a:visited {
   text-decoration: none;
-  color: black;
+  color: #757536;
 }
 
 ul > li > a:hover,
 .active {
   text-decoration: underline;
   text-decoration-thickness: 3px;
-  text-decoration-color: #aeed9d;
+  text-decoration-color: #757536;
   text-underline-offset: 2px;
   font-weight: bold;
 }

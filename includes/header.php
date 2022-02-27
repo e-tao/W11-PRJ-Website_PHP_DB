@@ -38,7 +38,7 @@ $products = ProductQuery::getProducts($pdo);
 
 <body>
     <header>
-        <p>Itsy Bitsy Baby Nutrition</p>
+        <p>(Itsy Bitsy Baby Nutrition)</p>
     </header>
     <nav>
         <?php
