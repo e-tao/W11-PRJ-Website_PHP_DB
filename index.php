@@ -6,9 +6,12 @@ include './includes/header.php';
     <?php
     if($page->getPn()=='shop'){
         echo Product::display($products);
-    } else {
+    } 
+    else {
         echo "<div id=\"p{$page->getPn()}\">{$page->getPc()}</div>";
     }
+
+
     
     ?>
 </main>

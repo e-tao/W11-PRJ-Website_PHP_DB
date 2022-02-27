@@ -4,10 +4,12 @@ require_once './includes/dbConn.php';
 require_once './includes/model/menu_query.php';
 require_once './includes/model/page_query.php';
 require_once './includes/model/product_query.php';
+require_once './includes/model/user_query.php';
 
 require_once './includes/menu.php';
 require_once './includes/page.php';
 require_once './includes/product.php';
+
 
 $connect = new DbConn();
 $pdo = $connect->getPDO();
