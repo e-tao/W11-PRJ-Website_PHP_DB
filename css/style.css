@@ -95,18 +95,24 @@ main {
   height: auto;
 }
 
-#p404 {
+#p404,
+#psuccess,
+#pfail {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 60px;
 }
 
-#img404 > img {
+#img404 > img,
+#img-success > img,
+#img-fail > img {
   height: 400px;
 }
 
-#txt404 > p {
+#txt404 > p,
+#txt-success > p,
+#txt-fail > p {
   font-size: 15pt;
   margin-top: 20px;
 }
@@ -165,6 +171,7 @@ main {
   justify-content: space-evenly;
   margin-top: 50px;
 }
+
 #login,
 #register {
   display: flex;
@@ -189,4 +196,5 @@ main {
   border: 0px;
   background-color: #aeed9d;
   border-radius: 5px;
+  cursor: pointer;
 }

@@ -10,10 +10,8 @@ require_once './includes/menu.php';
 require_once './includes/page.php';
 require_once './includes/product.php';
 
-
 $connect = new DbConn();
 $pdo = $connect->getPDO();
-
 
 $pageName = isset($_GET['p']) ? $_GET['p'] : 'home';
 $page = PageQuery::getPageIfExists($pageName, $pdo);
