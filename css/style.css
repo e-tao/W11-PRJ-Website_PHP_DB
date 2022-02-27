@@ -146,3 +146,34 @@ main {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
+#plogin {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+#login,
+#register {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px black solid;
+  border-radius: 5px;
+  background-color: rgba(247, 241, 163, 0.6);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+#login-btn,
+#register-btn {
+  width: 60px;
+  height: 30px;
+  border: 0px;
+  background-color: #aeed9d;
+  border-radius: 5px;
+}
