@@ -8,7 +8,7 @@ $pdo = $connect->getPDO();
     if (isset($_POST['username'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $createUserResponse = User::AddUser($username, $password, $pdo);
+        $createUserResponse = UserQuery::AddUser($username, $password, $pdo);
         if ($createUserResponse){
              return header("Location: ../index.php?p=success");
         } else{

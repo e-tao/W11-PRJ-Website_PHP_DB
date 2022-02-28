@@ -1,6 +1,6 @@
 <?php
 
-class User{
+class UserQuery{
     public static function AddUser($username, $password, $pdo)
     {
         $q = $pdo->prepare('SELECT `userId` FROM `user` WHERE `username`=:username');
