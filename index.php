@@ -5,14 +5,16 @@ include './includes/header.php';
 <main>
     <?php
     if($page->getPn()=='shop'){
-        echo Product::display($products);
+        if(!isset($_COOKIE['username'])){
+            echo "<div id=\"p{$page->getPn()}\">{$page->getPc()}</div>";
+        } else{
+            echo Product::display($products);
+        }
+        
     } 
     else {
         echo "<div id=\"p{$page->getPn()}\">{$page->getPc()}</div>";
     }
-
-
-    
     ?>
 </main>
 

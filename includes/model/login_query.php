@@ -3,13 +3,7 @@
 class LoginQuery{
 
     private $user;
-    private $pdo;
-
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
-        $this->login($pdo);
-   }
+    private $loginResults = array();
 
     public static function LoginWithPassword($username, $password,$pdo)
         {
@@ -56,19 +50,26 @@ class LoginQuery{
         if (isset($_POST['login']) && isset($_POST['username']) && isset($_POST['password'])) {
             $username = $_POST['username'];
             $password = $_POST['password'];
+            $remember = $_POST['remember'];
+            echo $username.' '.$password.' '.$remember;
             $login = LoginQuery::LoginWithPassword($username, $password, $pdo);
+            $period = $remember? time() + 60 * 60 * 24 * 1: 0;
             if ($login['status']) {
                 $this->user = $login['user-info'];
-                setcookie('username', $this->user['username'], time() + 60 * 30, '/');
-                setcookie('code', $login['cookie'], time() + 60 * 30, '/');
+                setcookie('username', $this->user['username'], $period, '/', null);
+                setcookie('code', $login['cookie'], $period, '/', null);
+
+                // 
             }
         } else {
             if (isset($_COOKIE['username']) && isset($_COOKIE['code'])) {
+                $remember = $_POST['remember'];
                 $login = LoginQuery::LoginWithCookie($_COOKIE['username'], $_COOKIE['code'], $pdo);
+                $period = $remember? time() + 60 * 60 * 24 * 1: 0;
                 if ($login['status']) {
                     $this->user = $login['user-info'];
-                    setcookie('username', $this->user['username'], time() + 60 * 30, '/');
-                    setcookie('code', $login['cookie'], time() + 60 * 30, '/');
+                    setcookie('username', $this->user['username'], $period, '/', null);
+                    setcookie('code', $login['cookie'], $period, '/', null);
                 }
             }
         }

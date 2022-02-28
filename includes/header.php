@@ -13,7 +13,7 @@ require_once './includes/product.php';
 
 $connect = new DbConn();
 $pdo = $connect->getPDO();
-$login = new LoginQuery($pdo);
+// $login = new LoginQuery();
 
 $pageName = isset($_GET['p']) ? $_GET['p'] : 'home';
 $page = PageQuery::getPageIfExists($pageName, $pdo);
@@ -24,7 +24,6 @@ if ($page == null) {
 
 $products = ProductQuery::getProducts($pdo);
 //var_dump($products);
-
 ?>
 
 <!DOCTYPE html>
@@ -51,15 +50,15 @@ $products = ProductQuery::getProducts($pdo);
         echo "<div>";
         $loginNav = MenuQuery::getMenuItems('login', $pdo);
         //$logoutNav = MenuQuery::getMenuItems('logout',$pdo);
-        $userInfo = $login->getUser();;
-
-        if($userInfo == null) {
-            echo Menu::display($loginNav);
-        } else {
+        
+        if(isset($_COOKIE['username'])){
+            $loginUser = $_COOKIE['username'];
             echo "<div id=\"welcome\">";
-            echo "Welcome back {$userInfo['username']}";
+            echo "Welcome {$loginUser}";
+            echo "</div>";  
         }
-        echo "</div>";
-
+        else{
+            echo Menu::display($loginNav);
+        }
         ?>
     </nav>
