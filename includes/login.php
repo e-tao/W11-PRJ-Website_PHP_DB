@@ -5,10 +5,6 @@
     $connect = new DbConn();
     $pdo = $connect->getPDO();
 
-    // if (isset($_POST['remember'])) {
-    //     $remember = true;
-    // }
-
     $login = new LoginQuery();
     $login->login($pdo);
 

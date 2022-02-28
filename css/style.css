@@ -202,5 +202,13 @@ main {
 }
 
 #welcome {
+  display: inline-flex;
   margin-right: 20px;
+  align-items: center;
+  color: #757536;
+}
+
+#welcome img {
+  height: 30px;
+  margin-left: 15px;
 }

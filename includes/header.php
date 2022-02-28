@@ -49,12 +49,12 @@ $products = ProductQuery::getProducts($pdo);
         echo "</div>";
         echo "<div>";
         $loginNav = MenuQuery::getMenuItems('login', $pdo);
-        //$logoutNav = MenuQuery::getMenuItems('logout',$pdo);
-        
+         
         if(isset($_COOKIE['username'])){
             $loginUser = $_COOKIE['username'];
             echo "<div id=\"welcome\">";
             echo "Welcome {$loginUser}";
+            echo "<a href=\"./includes/logout.php\"><img src=\"./img/logout.png\" /></a>";
             echo "</div>";  
         }
         else{
