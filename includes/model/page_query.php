@@ -1,5 +1,4 @@
 <?php
-
 class PageQuery
 {
     public static function getPageIfExists($pageName, $pdo)
@@ -8,7 +7,6 @@ class PageQuery
         $q->execute(["pageName" => $pageName]);
         
         if ($row = $q->fetch()) {
-            //var_dump($row);
             return new Page($row['pageTitle'], $row['pageName'], $row['pageContent']);
         }
         return null;

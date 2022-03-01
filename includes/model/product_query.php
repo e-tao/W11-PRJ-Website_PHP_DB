@@ -1,5 +1,4 @@
 <?php
-
 class ProductQuery
 {
     public static function getProducts ($pdo)
@@ -10,9 +9,7 @@ class ProductQuery
         $products = array();
 
         while ($row = $q->fetch()) {
-            //var_dump($row);
             $products[] = new Product($row['productName'], $row['productPrice'], $row['productImg'], $row['productCat']);
-            //var_dump($products);
         }
 
         return $products;

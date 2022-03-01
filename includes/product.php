@@ -31,20 +31,20 @@ class Product{
         return $productList;
     }
 
-    private function getName() {
-        return $this->pName;
-    }
+    // private function getName() {
+    //     return $this->pName;
+    // }
 
-    private function getPrice() {
-        return $this->pPrice;
-    }
+    // private function getPrice() {
+    //     return $this->pPrice;
+    // }
 
-    private function getImg() {
-        return $this->pImg;
-    }
+    // private function getImg() {
+    //     return $this->pImg;
+    // }
 
-    private function getCat() {
-        return $this->pCat;
-    }
+    // private function getCat() {
+    //     return $this->pCat;
+    // }
 
 }

@@ -3,11 +3,9 @@
 class LoginQuery{
 
     private $user;
-    private $loginResults = array();
 
     public static function LoginWithPassword($username, $password,$pdo)
         {
-
             $q = $pdo->prepare('SELECT `userId`, `username`, `passHash` FROM `user` WHERE `username`=?');
             $q->execute([$username]);
 
@@ -17,7 +15,6 @@ class LoginQuery{
 
                     $cookie = md5(mt_rand(0, 999999999999));
                     $cookieHash = password_hash($cookie, PASSWORD_BCRYPT);
-
 
                     $q = $pdo->prepare('UPDATE `user` SET `cookieHash` = :chash WHERE `user`.`userId`=:userId;');
                     $q->execute(['chash' => $cookieHash, 'userId' => $row['userId']]);
@@ -30,7 +27,6 @@ class LoginQuery{
 
         public static function LoginWithCookie($username, $cookie, $pdo)
         {
-
             $q = $pdo->prepare('SELECT `userId`, `username`, `cookieHash` FROM `user` WHERE `username`=?');
             $q->execute([$username]);
 
@@ -41,7 +37,6 @@ class LoginQuery{
                 }
             }
             return array('status' => false, 'message' => 'failed to login, please try again!');
-            //echo $username . ' ' . $password;
         }
    
 
@@ -58,8 +53,6 @@ class LoginQuery{
                 $this->user = $login['user-info'];
                 setcookie('username', $this->user['username'], $period, '/', null);
                 setcookie('code', $login['cookie'], $period, '/', null);
-
-                // 
             }
         } else {
             if (isset($_COOKIE['username']) && isset($_COOKIE['code'])) {

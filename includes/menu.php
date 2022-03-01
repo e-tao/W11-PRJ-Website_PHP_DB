@@ -2,12 +2,9 @@
 
 class Menu
 {
-
     private $lp;
     private $isActive;
     private $menuText;
-    //private $menuLocation;
-
 
     public function __construct($menuText, $lp)
     {
@@ -35,18 +32,4 @@ class Menu
         $nav .= "</ul>";
         return $nav;
     }
-
-    // public static function setStatus($menuItems)
-    // {
-    //     $currentPage = $_GET['p'];
-    //     foreach ($menuItems as $item) {
-    //         echo $item->lp;
-    //         if($item->lp == $currentPage){
-    //             $item->isActive = true;
-    //         echo $currentPage;
-    //         echo '<br>';
-    //         echo $item->isActive;
-    //         }
-    //     }
-    // }
 }

@@ -13,7 +13,6 @@ require_once './includes/product.php';
 
 $connect = new DbConn();
 $pdo = $connect->getPDO();
-// $login = new LoginQuery();
 
 $pageName = isset($_GET['p']) ? $_GET['p'] : 'home';
 $page = PageQuery::getPageIfExists($pageName, $pdo);
@@ -23,7 +22,6 @@ if ($page == null) {
 }
 
 $products = ProductQuery::getProducts($pdo);
-//var_dump($products);
 ?>
 
 <!DOCTYPE html>

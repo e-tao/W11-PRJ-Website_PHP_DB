@@ -95,6 +95,16 @@ main {
   height: auto;
 }
 
+#pabout ul {
+  display: contents;
+  list-style: circle;
+  text-align: center;
+}
+
+#pabout ul li {
+  margin-left: 220px;
+}
+
 #p404,
 #psuccess,
 #pfail,

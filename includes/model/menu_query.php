@@ -1,4 +1,3 @@
-
 <?php
 
 class MenuQuery
@@ -12,7 +11,6 @@ class MenuQuery
 
         while ($row = $q->fetch()) {
             $menuItems[] = new Menu($row['menuText'], $row['pageName']);
-            //var_dump($menuItems);
         }
 
         return $menuItems;
