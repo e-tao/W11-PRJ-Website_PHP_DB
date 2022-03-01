@@ -12,7 +12,7 @@ class DbConn
     private function DbConfig()
     {
         $host = '192.168.1.15';
-        $db = 'w11_assignment';
+        $db = 'w11_assignment_ChengTao';
         $char = 'utf8mb4';
 
         $user = 'ethan';
