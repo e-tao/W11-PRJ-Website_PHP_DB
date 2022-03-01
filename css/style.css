@@ -139,16 +139,28 @@ main {
 #phome > img {
   height: 150px;
   border-radius: 75px;
-  opacity: 0.8;
+  opacity: 0.7;
   float: left;
+}
+
+#phome #eat {
+  float: right;
+  height: 200px;
+  opacity: 0.7;
+  border-radius: 75px;
 }
 
 #phome > p,
 #pabout > p,
-#pshop > p {
+#pshop > p,
+#phome #left > p {
   margin-left: 180px;
   margin-bottom: 15px;
   font-size: 15pt;
+}
+
+#phome #left > p {
+  margin-left: 20px;
 }
 
 #phome > ul > li {
