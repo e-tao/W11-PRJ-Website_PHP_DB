@@ -98,6 +98,7 @@ main {
 #p404,
 #psuccess,
 #pfail,
+#pcontact,
 #pshop {
   display: flex;
   justify-content: space-evenly;
@@ -107,13 +108,15 @@ main {
 
 #img404 > img,
 #img-success > img,
-#img-fail > img {
+#img-fail > img,
+#img-contact > img {
   height: 400px;
 }
 
 #txt404 > p,
 #txt-success > p,
-#txt-fail > p {
+#txt-fail > p,
+#txt-contact > p {
   font-size: 15pt;
   margin-top: 20px;
 }
