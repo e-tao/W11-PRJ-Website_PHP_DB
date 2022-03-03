@@ -46,7 +46,7 @@ class LoginQuery{
             $username = $_POST['username'];
             $password = $_POST['password'];
             $remember = $_POST['remember'];
-            echo $username.' '.$password.' '.$remember;
+            // echo $username.' '.$password.' '.$remember;
             $login = LoginQuery::LoginWithPassword($username, $password, $pdo);
             $period = $remember? time() + 60 * 60 * 24 * 1: 0;
             if ($login['status']) {

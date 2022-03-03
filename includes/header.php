@@ -55,7 +55,7 @@ $products = ProductQuery::getProducts($pdo);
             echo "Welcome {$loginUser}";
             echo "<a href=\"./includes/logout.php\"><img src=\"./img/logout.png\" /></a>";
             echo "</div>";  
-        }
+        } 
         else{
             echo Menu::display($loginNav);
         }
