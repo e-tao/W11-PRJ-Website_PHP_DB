@@ -108,6 +108,7 @@ main {
 #p404,
 #psuccess,
 #pfail,
+#ploginfail,
 #pcontact,
 #pshop {
   display: flex;

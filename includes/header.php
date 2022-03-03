@@ -15,6 +15,7 @@ $connect = new DbConn();
 $pdo = $connect->getPDO();
 
 $pageName = isset($_GET['p']) ? $_GET['p'] : 'home';
+
 $page = PageQuery::getPageIfExists($pageName, $pdo);
 if ($page == null) {
     $pageName = '404';

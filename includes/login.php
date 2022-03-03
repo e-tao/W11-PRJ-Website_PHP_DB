@@ -9,7 +9,11 @@
     $login->login($pdo);
 
     $userInfo = $login->getUser();
+
+    
     if (isset($userInfo)) {
         header("Location: ../index.php?p=home");
+    } else {
+        header("Location: ../index.php?p=loginfail");
     }
 ?>
