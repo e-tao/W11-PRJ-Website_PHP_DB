@@ -1,4 +1,4 @@
-# W11 Project A Website with PHP and MariaDB
+# W11 Project A website using PHP and MariaDB
 
 ## Introduction
 A simple website created in PHP with MariaDB
