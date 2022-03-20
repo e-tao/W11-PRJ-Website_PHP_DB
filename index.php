@@ -10,7 +10,6 @@ include './includes/header.php';
         } else{
             echo Product::display($products);
         }
-        
     } 
     else {
         echo "<div id=\"p{$page->getPn()}\">{$page->getPc()}</div>";
